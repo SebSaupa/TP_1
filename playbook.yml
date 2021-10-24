@@ -2,7 +2,7 @@
   hosts: dev
 
   tasks:
-    - name: Clone app repo
+    - name: Clone repo
       git:
         repo: https://github.com/SebSaupa/TP_1.git
         dest: /home/osboxes/TP_1
