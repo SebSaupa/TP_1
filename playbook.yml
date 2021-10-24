@@ -1,0 +1,15 @@
+- name: TP_1
+  hosts: dev
+
+  tasks:
+    - name: Clone app repo
+      git:
+        repo: https://github.com/SebSaupa/TP_1.git
+        dest: /home/osboxes/TP_1
+        force: yes
+
+    - name: Lance docker-compose
+      command: 
+        cmd: docker-compose up
+      args:
+        chdir: nodeapp/
